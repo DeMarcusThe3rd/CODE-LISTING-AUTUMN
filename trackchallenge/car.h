@@ -21,4 +21,3 @@ void rampAngle();
 void countDistance();
 void countTime();
 void stopFor(int t);
-void avoidObstacle();
