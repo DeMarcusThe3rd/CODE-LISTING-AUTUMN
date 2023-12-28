@@ -63,21 +63,6 @@ void turn(int t, int PWML, int PWMR){
     }
 }
 
-void followLine(int IRL, int IRR, int LT, int RT, int t, int v){
-    if((IRL < LT) && (IRR > RT)){
-        turn(t, -255, 255);
-    }
-    else if((IRL > LT) && (IRR < RT)){
-        turn(t, 255, -255);
-    }
-    else if((IRL < LT) && (IRR < RT)){
-        stop(t, 0);
-    }
-    else{
-        forward(t, v);
-    }
-}
-
 void followLine(int IRL, int IRR, int LT, int RT, int t, int PWM){
     if((IRL < LT) && (IRR > RT)){
         turn(t, -255, 255);
@@ -139,13 +124,4 @@ void rampAngle(){   //calculates and displays ramp angle
 
     delay(3000);  
 }
-
-void avoidObstacle(){   //detects obstacle
-    if (hc.dist()>50.00){
-        forward(0,150);
-    }
-
-    else{
-        turn(0,255,-255);
-    }
 }
