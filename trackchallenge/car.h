@@ -13,7 +13,7 @@
 #define LIR A2  //left IR sensor input
 #define ROT A3  //rotary encoder input
 
-
+/*function definitions*/
 void send_to_driver(unsigned char bit, int PWML, int PWMR);
 void forward(int t, int PWM);
 void backward(int t, int PWM);
