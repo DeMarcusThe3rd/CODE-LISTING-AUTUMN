@@ -109,7 +109,7 @@ void loop() {
     stopFor(4);  //stops for 4 seconds
     forward(100, 200);
 
-    starttime = millis();
+    starttime = millis();  //starts counting start time
     rampswitch = 6;
   
     countDistance(); 
